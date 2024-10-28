@@ -4,6 +4,18 @@
  * @param {number} symbolsCount
  * @returns {string}
  */
+
 module.exports.backToFront = function backToFront(str, symbolsCount) {
-  throw new Error('Not implemented');
+  var pasteStr = "";
+  let length = str.length;
+  if (symbolsCount <= length) {
+    for (let i = length - symbolsCount; i < length; i++) {
+      pasteStr += str[i];
+    }
+    return pasteStr + str + pasteStr;
+  } 
+  else
+  {
+    return str;
+  }
 };
